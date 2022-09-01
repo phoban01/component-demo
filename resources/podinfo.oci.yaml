@@ -1,0 +1,7 @@
+name: podinfo
+version: v1.0.0
+relation: external
+type: ociImage
+access:
+  type: ociArtefact
+  imageReference: ghcr.io/phoban01/podinfo:6.2.0

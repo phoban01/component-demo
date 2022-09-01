@@ -1,0 +1,20 @@
+templateResource:
+  name: kubernetes-manifests
+
+configRules:
+  - value: settings.color
+    file: configmap.yaml
+    path: data.color
+
+configScheme:
+  type: object
+  properties:
+    color:
+      type: string
+  additionalProperties: false
+
+localizationRules:
+  - file: deploy.yaml
+    image: spec.template.spec.containers[0].image
+    resource:
+      name: podinfo

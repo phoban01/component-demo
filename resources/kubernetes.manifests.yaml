@@ -1,0 +1,7 @@
+---
+name: kubernetes-manifests
+type: localBlob
+input:
+  type: dir
+  path: content/kubernetes
+  compress: true

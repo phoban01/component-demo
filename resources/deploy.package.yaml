@@ -1,0 +1,6 @@
+name: deploy
+type: ocm.fluxcd.io/package
+input:
+  type: file
+  path: content/package.yaml
+  compress: true
