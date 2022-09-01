@@ -8,6 +8,9 @@ configRules:
   - value: (( message ))
     file: configmap.yaml
     path: data.PODINFO_UI_MESSAGE
+  - value: (( color ))-value
+    file: config/configmap.yaml
+    path: data.VALUE
 
 configScheme:
   type: object
