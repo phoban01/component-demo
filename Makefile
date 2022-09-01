@@ -1,5 +1,5 @@
 NAME      = flux-demo
-IMAGE     = phoban01$(NAME)
+IMAGE     = phoban01/$(NAME)
 COMPONENT = github.com/$(IMAGE)
 VERSION   = v1.0.0
 
@@ -14,3 +14,7 @@ build:
 .PHONY: push
 push:
 	ocm transfer ca out ghcr.io/phoban01
+
+.PHONY: sign
+sign:
+	ocm sign componentversion --signature phoban01 --private-key=rsa.priv -r ghcr.io/phoban01 $(COMPONENT)
