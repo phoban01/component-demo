@@ -2,14 +2,19 @@ templateResource:
   name: kubernetes-manifests
 
 configRules:
-  - value: settings.color
+  - value: (( color ))
     file: configmap.yaml
-    path: data.color
+    path: data.PODINFO_UI_COLOR
+  - value: (( message ))
+    file: configmap.yaml
+    path: data.PODINFO_UI_MESSAGE
 
 configScheme:
   type: object
   properties:
     color:
+      type: string
+    message:
       type: string
   additionalProperties: false
 
